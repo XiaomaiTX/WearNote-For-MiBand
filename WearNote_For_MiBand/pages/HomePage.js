@@ -24,7 +24,7 @@ try {
 
                         break;
                     case 1:
-                        
+
                         break;
                     case 2:
 
@@ -49,8 +49,25 @@ try {
                     align_v: hmUI.align.CENTER_V,
                     text_style: hmUI.text_style.NONE,
                     text: 'HELLO ZEPPOS'
-                  })
-              
+                })
+
+                hmUI.createWidget(hmUI.widget.BUTTON, {
+                    x: (480 - 400) / 2,
+                    y: 240,
+                    w: 50,
+                    h: 20,
+                    radius: 12,
+                    normal_color: 0x0986d4,
+                    press_color: 0x0986d4,
+                    text: '+',
+                    click_func: (button_widget) => {
+                        hmApp.gotoPage({
+                            url: "pages/New",
+                            param: ''
+                        });
+
+                    }
+                })
 
                 /*------------------------------
                 | 其他函数                      |

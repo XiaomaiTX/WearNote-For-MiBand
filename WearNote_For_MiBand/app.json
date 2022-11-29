@@ -42,6 +42,7 @@
                         "pages/View",
                         "pages/UserAgreement",
                         "pages/Test",
+                        "pages/New",
                         "pages/HomePage"
                     ]
                 },
