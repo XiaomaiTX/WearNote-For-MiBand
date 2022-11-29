@@ -18,11 +18,11 @@
             "code": 1,
             "name": "1.0.0"
         },
-        "appId": 49897,
+        "appId": 221129,
         "appName": "WearNote",
         "icon": "icon.png",
         "vender": "小麦同学",
-        "description": "你的腕上笔记~"
+        "description": "你的腕上轻笔记~"
     },
     "runtime": {
         "apiVersion": {
