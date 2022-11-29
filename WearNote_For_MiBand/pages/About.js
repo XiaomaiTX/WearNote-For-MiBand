@@ -21,19 +21,19 @@ try {
                 const language = hmSetting.getLanguage();
                 switch (language) {
                     case 0:
-                        var DevelopersInfo = '环管Pro 4.6.2\nAPPID 49897\n官方Q群:829942108\n开发者：\ngohj99 小麦同学 台风眼 zhang_Monday';
+                        var DevelopersInfo = 'WearNote\nAPPID 221129\n';
                         var WarningText = '警告！！！\n实验性界面含有开发中内容！\n可能会导致未知的后果！\n请谨慎选择是否进入！\n后果自负！';
                         var TipToast1 = '再点击';
                         var TipToast2 = '次进入实验界面';
                         break;
                     case 1:
-                        var DevelopersInfo = '環管Pro 4.6.2\nAPPID 49897\n官方Q群:829942108\n開發者：\ngohj99 小麥同學 颱風眼 zhang_Monday';
+                        var DevelopersInfo = '';
                         var WarningText = '警告！ ！ ！ \n實驗性界面含有開發中內容！\n可能會導致未知的後果！\n請謹慎選擇是否進入！\n後果自負！';
                         var TipToast1 = '再點擊';
                         var TipToast2 = '次進入實驗界面';
                         break;
                     case 2:
-                        var DevelopersInfo = 'Band Manager Pro 4.6.1\nAPPID 49897\nqq group:829942108\nAuthor:\ngohj99 小麦同学 台风眼 zhang_Monday';
+                        var DevelopersInfo = '';
                         var WarningText = 'WARNING! ! ! \nExperimental interface contains content in development! \nMay lead to unknown consequences! \nPlease choose carefully whether to enter! \nUse at your own risk!'
                         var TipToast1 = 'Click ';
                         var TipToast2 = ' more times to enter the experiment interface';
@@ -80,7 +80,7 @@ try {
                 }
                 if (n==0){
                     n=3
-                    hmApp.gotoPage({ url: 'pages/config/DebugPage', param: '' })
+                    hmApp.gotoPage({ url: 'pages/Test', param: '' })
                     }
                 })
 

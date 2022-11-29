@@ -25,7 +25,7 @@ try {
 
                         break;
                     case 1:
-                        
+
                         break;
                     case 2:
 
@@ -50,12 +50,10 @@ try {
                 const timer1 = timer.createTimer(250, null,
                     function (option) {
                         hmApp.gotoPage({
-                            url: "pages/tools/AppUnlockPage",
-                            param: JSON.stringify({
-                                mode: '1',//-1：设置密码，1：解锁，2：解锁未加密小程序，3解锁加密小程序
-                                topages: 'pages/config/ActivatePage'//跳转目标 空则代表返回
-                            })
-                        });                    }, null);
+                            url: "pages/HomePage",
+                            param: ''
+                        });
+                    }, null);
 
             } catch (error) {
                 hmApp.goBack();

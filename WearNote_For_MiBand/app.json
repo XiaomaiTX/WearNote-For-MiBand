@@ -36,7 +36,13 @@
             "module": {
                 "page": {
                     "pages": [
-                        "pages/index"
+                        "pages/index",
+                        "pages/About",
+                        "pages/Edit",
+                        "pages/View",
+                        "pages/UserAgreement",
+                        "pages/Test",
+                        "pages/HomePage"
                     ]
                 },
                 "app-side": {
