@@ -21,13 +21,13 @@ try {
                 const language = hmSetting.getLanguage();
                 switch (language) {
                     case 0:
-                        var title_text="新建笔记"
+                        var Title_Text = "新建笔记"
                         break;
                     case 1:
-                        var title_text="新建笔记"
+                        var Title_Text = "新建笔记"
                         break;
                     case 2:
-                        var title_text="新建笔记"
+                        var Title_Text = "New"
                         break;
                 }
 
@@ -38,19 +38,16 @@ try {
                 /*------------------------------
                 | 显示界面                      |
                 ------------------------------*/
-                const text = hmUI.createWidget(hmUI.widget.TEXT, {
+                const Title = hmUI.createWidget(hmUI.widget.TEXT, {
                     x: 10,
                     y: 80,
-                    w: 172,
-                    h: 50,
+                    w: 150,
+                    h: 52,
                     color: 0xffffff,
-                    text_size: 40,
-                    align_h: hmUI.align.CENTER_H,
-                    align_v: hmUI.align.CENTER_V,
-                    text_style: hmUI.text_style.NONE,
-                    text: title_text
-                  })
-              
+                    text_size: 42,
+                    text: Title_Text
+                })
+
 
                 /*------------------------------
                 | 其他函数                      |
