@@ -48,7 +48,7 @@ try {
                 const logo = hmUI.createWidget(hmUI.widget.IMG, {
                     x: 46,
                     y: 50,
-                    src: 'image/icon/app.png'
+                    src: 'icon.png'
                 });
                 const info = hmUI.createWidget(hmUI.widget.TEXT, {
                     x: 0,
