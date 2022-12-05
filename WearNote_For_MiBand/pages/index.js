@@ -47,7 +47,7 @@ try {
                 /*------------------------------
                 | 其他函数                      |
                 ------------------------------*/
-                const timer1 = timer.createTimer(250, null,
+                const timer1 = timer.createTimer(150, null,
                     function (option) {
                         hmApp.gotoPage({
                             url: "pages/HomePage",

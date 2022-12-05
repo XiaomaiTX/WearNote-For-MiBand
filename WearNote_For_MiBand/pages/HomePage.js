@@ -47,18 +47,30 @@ try {
                     text_size: 42,
                     text: Title_Text
                 })
+                const TopButtonImg = hmUI.createWidget(hmUI.widget.IMG, {
+                    x: 76,
+                    y: 20,
+                    src: 'menu.png'
+                })
+                const ButtomButtonImg = hmUI.createWidget(hmUI.widget.IMG, {
+                    x: 76,
+                    y: 20,
+                    src: 'plus.png'
+                })
+                TopButtonImg.setEnable(false)
+                ButtomButtonImg.setEnable(false)
                 const TopButton = hmUI.createWidget(hmUI.widget.BUTTON, {
                     x: 46,
                     y: 10,
                     w: 100,
                     h: 60,
-                    radius: 12,
+                    radius: 50,
                     normal_color: 0x212121,
                     press_color: 0x0D0D0D,
                     text: '',
                     click_func: (button_widget) => {
                         hmApp.gotoPage({
-                            url: "pages/New",
+                            url: "pages/Setting",
                             param: ''
                         });
                     }
@@ -67,11 +79,11 @@ try {
                     x: 46,
                     y: 350,
                     w: 100,
-                    h: 20,
-                    radius: 12,
+                    h: 60,
+                    radius: 50,
                     normal_color: 0x0986d4,
                     press_color: 0x043658,
-                    text: '+',
+                    text: '',
                     click_func: (button_widget) => {
                         hmApp.gotoPage({
                             url: "pages/New",
@@ -80,7 +92,7 @@ try {
 
                     }
                 })
-
+                
                 /*------------------------------
                 | 其他函数                      |
                 ------------------------------*/

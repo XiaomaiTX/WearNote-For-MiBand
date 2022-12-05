@@ -7,7 +7,7 @@ try {
                 /*------------------------------
                 | 初始化                        |
                 ------------------------------*/
-                hmUI.setLayerScrolling(false);
+                hmUI.setLayerScrolling(true);
                 hmApp.setScreenKeep(true);
                 hmApp.unregisterGestureEvent();
                 /*------------------------------
@@ -21,38 +21,42 @@ try {
                 const language = hmSetting.getLanguage();
                 switch (language) {
                     case 0:
-                        var Title_Text = "新建"
+                        var DevelopersInfo = '设置';
                         break;
                     case 1:
-                        var Title_Text = "新建"
+                        var DevelopersInfo = '設定';
                         break;
                     case 2:
-                        var Title_Text = "New"
+                        var DevelopersInfo = 'Settings';
                         break;
                 }
-
                 /*------------------------------
                 | 其他配置                      |
                 ------------------------------*/
-                
                 /*------------------------------
                 | 显示界面                      |
                 ------------------------------*/
-                const Title = hmUI.createWidget(hmUI.widget.TEXT, {
-                    x: 10,
-                    y: 80,
-                    w: 150,
-                    h: 52,
-                    color: 0xffffff,
-                    text_size: 42,
-                    text: Title_Text
-                })
-
-
+                const logo = hmUI.createWidget(hmUI.widget.IMG, {
+                    x: 46,
+                    y: 50,
+                    src: 'icon.png'
+                });
+                const info = hmUI.createWidget(hmUI.widget.TEXT, {
+                    x: 0,
+                    y: 150,//100
+                    w: 192,
+                    h: 300,
+                    color: 16777215,
+                    text_size: 20,
+                    align_h: hmUI.align.CENTER_H,
+                    align_v: hmUI.align.CENTER_V,
+                    text_style: hmUI.text_style.WRAP,
+                    text: DevelopersInfo
+                });
                 /*------------------------------
                 | 其他函数                      |
                 ------------------------------*/
-
+                //...
             } catch (error) {
                 hmApp.goBack();
             }
