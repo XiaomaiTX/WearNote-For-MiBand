@@ -1,31 +1,37 @@
-# WearNote-For-MiBand
+<p align="center"><img src="https://s1.ax1x.com/2022/12/05/zynDA0.png" width="150px"/></p>
+
+<h1 align="center">WearNote-For-MiBand</h1>
 
 ## Introduction - 介绍
+
+你的环上笔记✧٩(ˊωˋ*)و✧
+
+一款适用于`小米手环7/7 NFC`的笔记应用
 
 ### Summary - 概要
 
 ### Features - 特性
 
-## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
+## Requirements - 必要条件与环境
 
-## Configuration - 配置（配置信息。）
+## Configuration - 配置
 
-## Installation - 安装（如何安装。）
+## Installation - 安装
 
-## Usage - 用法（用法。）
+## Usage - 用法
 
-## Development - 开发（关于怎样开发的文档信息。（API 等。））
+## Development - 开发
 
-## Changelog - 更新日志（一个简短的历史记录（更改，替换或者其他）。）
+## Changelog - 更新日志
 
-## FAQ - 常见问题（常见问题。）
+## FAQ - 常见问题
 
 ## Support - 支持
 
-### Dos - 文档（更多文档。）
+### Dos - 文档
 
-### Contact - 联系（其他联系信息（电子邮件地址，网站，公司名称，地址等）。提交bug，功能要求，提交补丁，加入邮件列表，得到通知，或加入用户或开发开发区群的介绍。）
+### Contact - 联系
 
-## Authors and acknowledgment - 贡献者和感谢（作者列表和鸣谢。）
+## Authors and acknowledgment - 贡献者和感谢
 
-## License - 版权信息（版权和许可信息（或阅读许可证）、法律声明。）
+## License - 版权信息
