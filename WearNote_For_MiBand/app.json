@@ -43,6 +43,7 @@
                         "pages/UserAgreement",
                         "pages/Test",
                         "pages/New",
+                        "pages/Setting",
                         "pages/HomePage"
                     ]
                 },

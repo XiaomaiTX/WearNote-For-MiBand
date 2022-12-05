@@ -92,7 +92,58 @@ try {
 
                     }
                 })
-                
+                const NotesList = hmUI.createWidget(hmUI.widget.SCROLL_LIST, {
+                    x: 10,
+                    y: 142,
+                    w: 172,
+                    h: 0,//初始化为0
+                    item_space: 20,//每个item之间的间距
+                    item_config: [
+                      {
+                        type_id: 1,
+                        item_bg_color: 0xef5350,
+                        item_bg_radius: 10,
+                        text_view: [
+                          { x: 0, y: 0, w: 172, h: 100, key: 'name', color: 0xffffff, text_size: 20 },
+                          { x: 0, y: 80, w: 172, h: 172, key: 'size', color: 0xffffff }
+                        ],
+                        text_view_count: 2,
+                        item_height: 120
+                      },
+                      {
+                        type_id: 2,
+                        item_bg_color: 0xef5350,
+                        item_bg_radius: 10,
+                        text_view: [
+                          { x: 0, y: 0, w: 480, h: 80, key: 'name', color: 0x000000, text_size: 20 },
+                          { x: 0, y: 80, w: 480, h: 40, key: 'size', color: 0x000000 }
+                        ],
+                        text_view_count: 2,
+                        item_height: 120
+                      }
+                    ],
+                    item_config_count: 2,
+                    data_array: dataList,
+                    data_count: dataList.length,
+                    item_click_func: (item, index) => {
+                      console.log(`scrollListItemClick index=${index}`)
+                      updateConfig()
+                    },
+                    data_type_config: [
+                      {
+                        start: 0,
+                        end: 1,
+                        type_id: 1
+                      },
+                      {
+                        start: 1,
+                        end: 2,
+                        type_id: 2
+                      }
+                    ],
+                    data_type_config_count: 2
+                  })
+              
                 /*------------------------------
                 | 其他函数                      |
                 ------------------------------*/

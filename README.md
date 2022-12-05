@@ -35,3 +35,5 @@
 ## Authors and acknowledgment - 贡献者和感谢
 
 ## License - 版权信息
+
+本仓库及其应用遵循`Apache-2.0`开源协议
