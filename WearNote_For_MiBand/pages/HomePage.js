@@ -9,7 +9,17 @@ try {
                 ------------------------------*/
                 hmUI.setLayerScrolling(false);
                 hmApp.setScreenKeep(true);
-                hmApp.unregisterGestureEvent();
+                hmApp.registerGestureEvent(function (event) {
+                  switch (event) {
+                    case hmApp.gesture.RIGHT:
+                      hmApp.exit();
+                      break
+                    default:
+                      break
+                  }                
+                  //不跳过默认手势
+                  return ture
+                })
                 /*------------------------------
                 | 设置语言                      |
                 ------------------------------*/
@@ -47,15 +57,10 @@ try {
                     text_size: 42,
                     text: Title_Text
                 })
-                const TopButtonImg = hmUI.createWidget(hmUI.widget.IMG, {
-                    x: 76,
-                    y: 20,
-                    src: 'menu.png'
-                })
                 const ButtomButtonImg = hmUI.createWidget(hmUI.widget.IMG, {
                     x: 76,
                     y: 20,
-                    src: 'plus.png'
+                    src: 'menu.png'
                 })
                 TopButtonImg.setEnable(false)
                 ButtomButtonImg.setEnable(false)
