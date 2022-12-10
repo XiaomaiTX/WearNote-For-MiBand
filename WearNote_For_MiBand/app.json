@@ -1,10 +1,10 @@
 {
     "i18n": {
         "zh-CN": {
-            "appName": "WearNote"
+            "appName": "环上笔记"
         },
         "zh-TW": {
-            "appName": "WearNote"
+            "appName": "環上筆記"
         },
         "en-US": {
             "appName": "WearNote"
@@ -22,7 +22,7 @@
         "appName": "WearNote",
         "icon": "icon.png",
         "vender": "小麦同学",
-        "description": "你的腕上轻笔记~"
+        "description": "你的环上轻笔记~"
     },
     "runtime": {
         "apiVersion": {

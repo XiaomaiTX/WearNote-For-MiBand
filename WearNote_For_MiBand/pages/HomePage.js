@@ -2,7 +2,7 @@ import { gettext } from 'i18n';
 
 try {
   Page({
-    build() {
+    build(dataList) {
       try {
         /*------------------------------
         | 初始化                        |
@@ -20,6 +20,8 @@ try {
           //不跳过默认手势
           return ture
         })
+        //修改APP全局变量，使得HomePage返回时返回到小程序列表，而不是在index被循环
+        getApp()._options.globalData.ifBack = 'true'
         /*------------------------------
         | 设置语言                      |
         ------------------------------*/
@@ -48,10 +50,11 @@ try {
         /*------------------------------
         | 显示界面                      |
         ------------------------------*/
+        //标题
         const Title = hmUI.createWidget(hmUI.widget.TEXT, {
           x: 10,
           y: 80,
-          w: 150,
+          w: 172,
           h: 50,
           color: 0xffffff,
           text_size: 40,
@@ -64,6 +67,7 @@ try {
           y: 360,
           src: 'menu.png'
         })
+
         //ButtomButtonImg取消事件
         ButtomButtonImg.setEnable(false)
 
@@ -86,13 +90,7 @@ try {
           }
         })
 
-        //
-        // TEST DATA
-        const dataList = [
-          { CreateButtonImg: rootPath + ''},
-          { Title: 'Note 1', Abstract: 'test text' },
-          { Title: 'TEST 1', Abstract: '1TEST TEXT' }
-        ]
+        //创建数据列表
         const ItemList = hmUI.createWidget(hmUI.widget.SCROLL_LIST, {
 
           x: 10,
@@ -107,6 +105,7 @@ try {
               item_bg_radius: 25,
               item_height: 50,
               image_view: [
+                //相对位置
                 { x: 69, y: 8, w: 34, h: 34, key: 'CreateButtonImg' }
               ],
               image_view_count: 1
@@ -116,6 +115,7 @@ try {
               item_bg_color: 0x333333,
               item_bg_radius: 10,
               text_view: [
+                //相对位置
                 { x: 22, y: 14, w: 140, h: 39, key: 'Title', color: 0xffffff, text_size: 28 },
                 { x: 22, y: 53, w: 140, h: 33, key: 'Abstract', color: 0x808080, text_size: 24 }
               ],
@@ -127,7 +127,25 @@ try {
           data_array: dataList,
           data_count: dataList.length,
           item_click_func: (item, index) => {
-            console.log(`scrollListItemClick index=${index}`)
+            console.log(`scrollListItemClick index=${index}`)// TODO 删掉console.log 
+            switch (index) {
+              case 0:
+                hmApp.gotoPage({
+                  url: "pages/New",
+                  param: ''
+                });
+                break
+              // TODO 跳转View界面
+              default:
+                hmFS.SysProSetInt('clickItemImdex', index)
+                hmApp.gotoPage({
+                  url: "pages/View",
+                  param: index
+                });
+
+                break
+
+            }
           },
           data_type_config: [
             {

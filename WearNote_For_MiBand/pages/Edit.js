@@ -10,6 +10,31 @@ try {
                 hmUI.setLayerScrolling(false);
                 hmApp.setScreenKeep(true);
                 hmApp.unregisterGestureEvent();
+                // TODO 全局下滑事件用来退出键盘？
+                /*
+                hmApp.registerGestureEvent(function (event) {
+                    switch (event) {
+                        case hmApp.gesture.UP:
+                            // TODO 这里用临时变量判断键盘是否处于激活状态，若是则退出键盘
+                            break
+                        case hmApp.gesture.DOWN:
+
+                            break
+                        case hmApp.gesture.LEFT:
+
+                            break
+                        case hmApp.gesture.RIGHT:
+
+                            break
+                        default:
+
+                            break
+                    }
+                    //不跳过默认手势
+                    return false
+                })
+                */
+
                 /*------------------------------
                 | 设置语言                      |
                 ------------------------------*/
@@ -24,7 +49,7 @@ try {
 
                         break;
                     case 1:
-                        
+
                         break;
                     case 2:
 
@@ -49,8 +74,8 @@ try {
                     align_v: hmUI.align.CENTER_V,
                     text_style: hmUI.text_style.NONE,
                     text: 'HELLO ZEPPOS'
-                  })
-              
+                })
+
 
                 /*------------------------------
                 | 其他函数                      |

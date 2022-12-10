@@ -21,13 +21,13 @@ try {
                 const language = hmSetting.getLanguage();
                 switch (language) {
                     case 0:
-                        var DevelopersInfo = '设置';
+                        var TEXT = '设置';
                         break;
                     case 1:
-                        var DevelopersInfo = '設定';
+                        var TEXT = '設定';
                         break;
                     case 2:
-                        var DevelopersInfo = 'Settings';
+                        var TEXT = 'Settings';
                         break;
                 }
                 /*------------------------------
@@ -51,7 +51,7 @@ try {
                     align_h: hmUI.align.CENTER_H,
                     align_v: hmUI.align.CENTER_V,
                     text_style: hmUI.text_style.WRAP,
-                    text: DevelopersInfo
+                    text: TEXT
                 });
                 /*------------------------------
                 | 其他函数                      |

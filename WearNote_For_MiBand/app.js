@@ -1,6 +1,6 @@
 App({
   globalData: {
-
+    ifBack :'false'
   },
   onCreate(options) {
     console.log('app on create invoke')
