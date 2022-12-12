@@ -1,7 +1,9 @@
 App({
   globalData: {
-    ifBack :'false'
-  },
+    ifBack :'false',
+    keyboard_x:16,
+    keyboard_y:240,
+    },
   onCreate(options) {
     console.log('app on create invoke')
   },

@@ -96,7 +96,7 @@ try {
           x: 10,
           y: 132,
           w: 172,
-          h: 0,// 初始化为0
+          h: 400,// 初始化为0
           item_space: 10,// 每个item之间的间距
           item_config: [
             {
