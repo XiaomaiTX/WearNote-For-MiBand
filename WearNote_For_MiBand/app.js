@@ -1,9 +1,7 @@
 App({
   globalData: {
-    ifBack :'false',
-    keyboard_x:16,
-    keyboard_y:240,
-    },
+    indexList:[{ CreateButtonImg: 'plus.png' }],
+  },
   onCreate(options) {
     console.log('app on create invoke')
   },

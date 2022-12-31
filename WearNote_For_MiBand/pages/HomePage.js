@@ -1,8 +1,8 @@
-import { gettext } from 'i18n';
+import { gettext } from "i18n";
 
 try {
   Page({
-    build(dataList) {
+    build(indexData) {
       try {
         /*------------------------------
         | 初始化                        |
@@ -12,16 +12,16 @@ try {
         hmApp.registerGestureEvent(function (event) {
           switch (event) {
             case hmApp.gesture.RIGHT:
-              hmApp.exit();
-              break
+              hmApp.gotoHome();
+              break;
             default:
-              break
+              break;
           }
-          //不跳过默认手势
-          return ture
-        })
-        //修改APP全局变量，使得HomePage返回时返回到小程序列表，而不是在index被循环
-        getApp()._options.globalData.ifBack = 'true'
+          // 跳过默认手势
+          return true;
+        });
+        // 修改APP全局变量，使得HomePage返回时返回到小程序列表，而不是在index被循环
+        //getApp()._options.globalData.ifBack = 'true'
         /*------------------------------
         | 设置语言                      |
         ------------------------------*/
@@ -33,13 +33,13 @@ try {
         const language = hmSetting.getLanguage();
         switch (language) {
           case 0:
-            var Title_Text = "笔记"
+            var Title_Text = "笔记";
             break;
           case 1:
-            var Title_Text = "笔记"
+            var Title_Text = "笔记";
             break;
           case 2:
-            var Title_Text = "Notes"
+            var Title_Text = "Notes";
             break;
         }
 
@@ -51,6 +51,7 @@ try {
         | 显示界面                      |
         ------------------------------*/
         //标题
+
         const Title = hmUI.createWidget(hmUI.widget.TEXT, {
           x: 10,
           y: 80,
@@ -58,40 +59,40 @@ try {
           h: 50,
           color: 0xffffff,
           text_size: 40,
-          text: Title_Text
-        })
+          text: Title_Text,
+        });
 
         //底部按钮图片
-        const ButtomButtonImg = hmUI.createWidget(hmUI.widget.IMG, {
-          x: 76,
-          y: 360,
-          src: 'menu.png'
-        })
-
-        //ButtomButtonImg取消事件
-        ButtomButtonImg.setEnable(false)
-
-        //底部按钮
-        const ButtomButton = hmUI.createWidget(hmUI.widget.BUTTON, {
+        const ButtomButton = hmUI.createWidget(hmUI.widget.IMG, {
           x: 46,
-          y: 350,
-          w: 100,
-          h: 60,
-          radius: 50,
-          normal_color: 0x0986d4,
-          press_color: 0x043658,
-          text: '',
-          click_func: (button_widget) => {
-            hmApp.gotoPage({
-              url: "pages/Setting",
-              param: ''
-            });
+          y: 410,
+          src: "img/HomePage-ButtomButton.png",
+        });
 
-          }
-        })
+        //底部按钮监听
+        ButtomButton.addEventListener(hmUI.event.CLICK_DOWN, function (info) {
+          hmApp.gotoPage({
+            url: "pages/Setting",
+            param: "",
+          });
+        });
+        const text = hmUI.createWidget(hmUI.widget.TEXT, {
+          x: 0,
+          y: 200,
+          w: 192,
+          h: 46,
+          color: 0xffffff,
+          text_size: 36,
+          align_h: hmUI.align.CENTER_H,
+          align_v: hmUI.align.CENTER_V,
+          text_style: hmUI.text_style.NONE,
+          //text: JSON.stringify(getApp()._options.globalData.indexList[1]),
+          text: "Hello Notes",
+        });
 
+        /*
         //创建数据列表
-        const ItemList = hmUI.createWidget(hmUI.widget.SCROLL_LIST, {
+        const itemList = hmUI.createWidget(hmUI.widget.SCROLL_LIST, {
 
           x: 10,
           y: 132,
@@ -124,8 +125,8 @@ try {
             }
           ],
           item_config_count: 2,
-          data_array: dataList,
-          data_count: dataList.length,
+          data_array: indexData,
+          data_count: indexData.length,
           item_click_func: (item, index) => {
             console.log(`scrollListItemClick index=${index}`)// TODO 删掉console.log 
             switch (index) {
@@ -143,7 +144,7 @@ try {
                   param: index
                 });
 
-                break
+              break
 
             }
           },
@@ -155,7 +156,7 @@ try {
             },
             {
               start: 1,
-              end: dataList.length - 1,
+              end: indexData.length - 1,
               type_id: 2
             }
           ],
@@ -165,12 +166,17 @@ try {
         /*------------------------------
         | 其他函数                      |
         ------------------------------*/
-
       } catch (error) {
-        hmApp.goBack();
+        hmApp.gotoHome();
       }
-    }
+    },
   });
 } catch (error) {
-  Page({ build() { try { hmApp.goBack(); } catch (error) { }; } });
+  Page({
+    build() {
+      try {
+        hmApp.gotoHome();
+      } catch (error) {}
+    },
+  });
 }

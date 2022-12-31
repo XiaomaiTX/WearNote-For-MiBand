@@ -39,36 +39,57 @@ try {
                 /*------------------------------
                 | 显示界面                      |
                 ------------------------------*/
-
+                
                 const icon = hmUI.createWidget(hmUI.widget.IMG, {
                     x: 46,
                     y: 195,
                     src: 'icon.png'
                 });
-
+                
+                /*
+                const text = hmUI.createWidget(hmUI.widget.TEXT, {
+                    x: 0,
+                    y: 200,
+                    w: 192,
+                    h: 46,
+                    color: 0xffffff,
+                    text_size: 36,
+                    align_h: hmUI.align.CENTER_H,
+                    align_v: hmUI.align.CENTER_V,
+                    text_style: hmUI.text_style.NONE,
+                    text: JSON.stringify(getApp()._options.globalData.indexList[0]),
+                  });
+                  
                 /*------------------------------
                 | 其他函数                      |
                 ------------------------------*/
                 //判断是否从上一页返回，返回到小程序列表
+                /*
                 if (getApp()._options.globalData.ifBack == 'true') {
                     hmApp.goBack();
                 }
+                */
                 // TODO 判断是否首次启动
 
-                // TODO 读取索引文件
+                // TODO 载入索引文件
+                var indexData = getApp()._options.globalData.indexList
+
                 // TEST DATA
+                indexData.push({ Title: 'Note 1', Abstract: 'test text' });
+                indexData.push({ Title: 'TEST 1', Abstract: '1TEST TEXT' });
+                /*
                 const dataList = [
-                    { CreateButtonImg: 'plus.png' },
                     { Title: 'Note 1', Abstract: 'test text' },
                     { Title: 'TEST 1', Abstract: '1TEST TEXT' }
                 ]
+                */
                 // 开屏LOGO，时长150ms
                 // TODO 后续按照索引大小决定LOGO时长，避免等待时间太久
                 const timer1 = timer.createTimer(150, null,
                     function (option) {
                         hmApp.gotoPage({
                             url: "pages/HomePage",
-                            param: dataList
+                            param: ''
                         });
                     }, null);
 
