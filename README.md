@@ -10,13 +10,32 @@
 
 ### Summary - 概要
 
+本应用基于
+
 ### Features - 特性
 
 ## Requirements - 必要条件与环境
 
+
 ## Configuration - 配置
 
 ## Installation - 安装
+
+安装本应用前，需要有一台安卓手机并安装以下应用
+
+>Zepplife（或小米运动健康）
+>表盘自定义工具（版本>=1.6）
+
+### 稳定版
+
+目前暂未发布稳定版，敬请期待！
+
+### 开发版
+
+注意！开发板可能含有大量bug或位置问题！下载后果自负！！！
+
+开发版可从`WearNote_For_MiBand/out`目录中获取
+开发板命名规则为`[APPID]-[AppName]-[Version]-[Time]`
 
 ## Usage - 用法
 
@@ -24,11 +43,15 @@
 
 ## Changelog - 更新日志
 
+未发布任何一个版本，所以没有更新日志（咕咕咕）
+
 ## FAQ - 常见问题
 
 ## Support - 支持
 
 ### Dos - 文档
+
+文档待编写（咕咕咕）
 
 ### Contact - 联系
 
