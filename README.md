@@ -10,7 +10,7 @@
 
 ### Summary - 概要
 
-本应用基于
+本应用基于JavaScrpit开发
 
 ### Features - 特性
 
