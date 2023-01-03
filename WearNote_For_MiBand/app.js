@@ -1,6 +1,7 @@
 App({
   globalData: {
-    indexList:[{ CreateButtonImg: 'plus.png' }],
+    indexList:[],
+    viewIndex:[],
   },
   onCreate(options) {
     console.log('app on create invoke')

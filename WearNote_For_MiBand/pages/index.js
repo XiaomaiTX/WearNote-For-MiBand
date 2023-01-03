@@ -75,8 +75,10 @@ try {
                 var indexData = getApp()._options.globalData.indexList
 
                 // TEST DATA
-                indexData.push({ Title: 'Note 1', Abstract: 'test text' });
-                indexData.push({ Title: 'TEST 1', Abstract: '1TEST TEXT' });
+                indexData.push({ Title: 'Note 1XXXXXXXX', Abstract: 'test textXXXXXXXXXXXXXXX' });
+                indexData.push({ Title: '中文测试XXXXXXXX', Abstract: '你的环上笔记✧٩(ˊωˋ*)و✧' });
+                indexData.push({ Title: 'TEST 2XXXXXXXX', Abstract: 'TEST TEXTXXXXXXXXXXXX' });
+                indexData.push({ Title: 'TEST 3XXXXXXXX', Abstract: 'TEST TEXTXXXXXXXXXXX' });
                 /*
                 const dataList = [
                     { Title: 'Note 1', Abstract: 'test text' },
